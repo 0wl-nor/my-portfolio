@@ -1,0 +1,77 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f9f9f9;
+  margin: 0;
+  padding: 20px;
+  color: #333;
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  background: white;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+@media screen and (max-width: 600px) {
+  .container {
+    padding: 10px;
+    font-size: 14px;
+  }
+  nav a {
+    display: block;
+    margin: 8px 0;
+  }
+}
+
+header h1 {
+  margin-bottom: 5px;
+}
+
+nav {
+  margin-bottom: 20px;
+  display: flex;
+  gap: 15px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #007bff;
+}
+
+nav a.active {
+  font-weight: bold;
+  border-bottom: 2px solid #007bff;
+}
+
+section {
+  margin-bottom: 30px;
+}
+
+ul {
+  padding-left: 20px;
+}
+
+.fade-in-section {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.fade-in-section.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* スマホなど */
+@media screen and (max-width: 600px) {
+  .fade-in-section {
+    transform: translateX(-20px);
+  }
+  .fade-in-section.is-visible {
+    transform: translateX(0);
+  }
+}
+
+
